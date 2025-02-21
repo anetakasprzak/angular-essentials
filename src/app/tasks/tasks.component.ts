@@ -15,8 +15,8 @@ export class TasksComponent {
   @Input({required: true}) userId!: string;
   @Input({required: true}) name!: string;
   isAddingTask = false;
-  private tasksService = new TaskService();
 
+constructor(private tasksService: TaskService) {}
 
 
 get selectedUserTasks() {
@@ -31,12 +31,8 @@ onStartAddTask() {
   this.isAddingTask = true;
 }
 
-onCancelAddTask() {
+onCloseAddTask() {
   this.isAddingTask = false;
 }
 
-onAddTask(taskData: NewTaskData) {
- 
-  this.isAddingTask = false;
-  }
 }
