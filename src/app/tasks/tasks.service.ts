@@ -3,7 +3,7 @@ import { type NewTaskData } from "./task/task.model";
 
 @Injectable({providedIn: 'root'})
 
-export class TaskService {
+export class TasksService {
   private tasks = [
     {
       id: 't1',
